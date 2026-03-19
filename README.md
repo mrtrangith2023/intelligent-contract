@@ -108,6 +108,21 @@ Submit request for AI evaluation
 }
 ```
 
+## 🔍 Example Output
+
+👉 This output demonstrates AI evaluation + verifiable execution.
+
+```json
+{
+  "request_id": "abc123",
+  "result": {
+    "score": 0.9,
+    "decision": "approved"
+  },
+  "status": "pending"
+}
+```
+
 ---
 
 ### 🔹 GET /verify/{request_id}
