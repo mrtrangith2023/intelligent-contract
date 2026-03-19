@@ -12,4 +12,5 @@ def test_submit_and_verify():
     res = contract.submit_request("user1", data)
     assert res["result"]["decision"] == "approve"
 
-    assert contract.verify(res["request_id"]) == True
+    result = contract.verify(res["request_id"])
+    assert result["valid"] is True

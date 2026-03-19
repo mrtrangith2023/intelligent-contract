@@ -1,31 +1,26 @@
-from fastapi import FastAPI
+from fastapi import APIRouter
 from app.contract import IntelligentContract
-from api.routes.contract import router as contract_router
 
-app = FastAPI()
-
-app.include_router(contract_router, prefix="/api")
+router = APIRouter()
 
 contract = IntelligentContract(owner="0xADMIN")
 
-
+@router.get("/")
 def root():
     return {"message": "Intelligent Contract API running"}
 
-
+@router.post("/submit")
 def submit(data: dict):
     return contract.submit_request("user", data)
 
-
+@router.get("/verify/{request_id}")
 def verify(request_id: str):
     return contract.verify(request_id)
 
-# 🔥 NEW ENDPOINTS
-
-
+@router.get("/history")
 def history():
     return contract.history
 
-    
+@router.get("/state/{request_id}")
 def state(request_id: str):
     return contract.state.get(request_id)
