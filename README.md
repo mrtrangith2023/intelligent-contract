@@ -1,4 +1,6 @@
 # 🚀 Intelligent Contract API (GenLayer Testnet)
+![Python](https://img.shields.io/badge/python-3.12-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-ready-green)
 
 ## 📌 Overview
 
