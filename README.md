@@ -1,4 +1,7 @@
 # 🚀 Intelligent Contract API (GenLayer Testnet)
+
+> AI-powered, verifiable smart contract simulation built for GenLayer
+
 ![Python](https://img.shields.io/badge/python-3.12-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-ready-green)
 
@@ -6,7 +9,14 @@
 
 This project implements an **Intelligent Contract System** using FastAPI, designed for the GenLayer ecosystem.
 
-It demonstrates how smart contracts can leverage **AI-based evaluation and verifiable execution** to process user requests in a deterministic and auditable way.
+It combines AI-based evaluation with a deterministic verification layer to simulate **verifiable computation**.
+
+Key capabilities include:
+- Evaluating user input through an AI logic module
+- Recomputing outputs for deterministic verification
+- Maintaining contract state and execution history for auditability
+
+👉 This demonstrates how intelligent contracts can operate in a scalable, transparent, and verifiable way.
 
 ---
 
