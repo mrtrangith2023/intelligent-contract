@@ -38,3 +38,7 @@ def mint_token(token: Token):
 @app.get("/tokens", response_model=List[Token])
 def get_tokens():
     return tokens
+
+@app.get("/")
+def read_root():
+    return {"message": "Backend is live!"}
