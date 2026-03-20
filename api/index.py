@@ -4,4 +4,4 @@ app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"message": "Vercel OK 🚀"}
+    return {"status": "API running 🚀"}
