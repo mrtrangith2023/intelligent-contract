@@ -4,7 +4,7 @@ function App() {
   const [owner, setOwner] = useState("");
   const [tokens, setTokens] = useState([]);
 
-  const API_URL = "https://intelligent-contract-backend.onrender.com"; // backend local
+  const API_URL = "https://intelligent-contract.onrender.com"; // backend local
 
   const fetchTokens = async () => {
     try {
