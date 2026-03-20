@@ -5,16 +5,20 @@ function App() {
   const [result, setResult] = useState("");
 
   const submit = async () => {
-    const res = await fetch("https://intelligent-contract-five.vercel.app/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ contract }),
-    });
+    try {
+      const res = await fetch("https://intelligent-contract-five.vercel.app/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ contract }),
+      });
 
-    const data = await res.json();
-    setResult(JSON.stringify(data));
+      const data = await res.json();
+      setResult(JSON.stringify(data, null, 2));
+    } catch (err) {
+      setResult("Error calling API");
+    }
   };
 
   return (
@@ -22,13 +26,16 @@ function App() {
       <h1>🚀 Intelligent Contract UI</h1>
 
       <textarea
-        rows="5"
-        cols="50"
+        rows="6"
+        cols="60"
+        placeholder="Paste contract here..."
+        value={contract}
         onChange={(e) => setContract(e.target.value)}
       />
 
-      <br />
-      <button onClick={submit}>Submit</button>
+      <br /><br />
+
+      <button onClick={submit}>Analyze</button>
 
       <pre>{result}</pre>
     </div>
